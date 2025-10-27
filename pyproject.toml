@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "triarb"
+version = "0.1.0"
+description = "Intra-exchange triangular arbitrage bot"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.9.1"
+
+fastapi = "^0.108.0"
+loguru = "^0.7.2"
+prometheus-client = "^0.19.0"
+pydantic = "^2.5.3"
+pydantic-settings = "^2.1.0"
+redis = {version = "^5.0.1", extras = ["hiredis"]}
+
+tenacity = "^8.2.3"
+uvicorn = {version = "^0.25.0", extras = ["standard"]}
+websockets = "^12.0"
+ccxt = "^4.1.74"
+sortedcontainers = "^2.4.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.2"
+black = "^23.12.1"
+ruff = "^0.1.9"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+
+[tool.black]
+line-length = 88
